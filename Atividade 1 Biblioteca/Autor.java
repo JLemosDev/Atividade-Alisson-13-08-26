@@ -4,6 +4,7 @@ public class Autor {
 
     public Autor(string nome, string nacionalidade ) {
         if (nome == null || nome.isblank()) throw new
+        i
     }
 
 }
