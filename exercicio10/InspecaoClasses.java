@@ -16,7 +16,7 @@ public class InspecaoClasses {
         String nomeClasse = scanner.nextLine();
 
         try {
-            // Carrega a classe em tempo de execução
+           
             Class<?> classe = Class.forName(nomeClasse);
 
             System.out.println("\n=== INFORMAÇÕES DA CLASSE ===");
@@ -25,9 +25,6 @@ public class InspecaoClasses {
             System.out.println("Modificadores: "
                     + Modifier.toString(classe.getModifiers()));
 
-            // =========================================================
-            // CONSTRUTORES
-            // =========================================================
 
             System.out.println("\n=== CONSTRUTORES ===");
 
@@ -49,10 +46,6 @@ public class InspecaoClasses {
                     );
                 }
             }
-
-            // =========================================================
-            // ATRIBUTOS
-            // =========================================================
 
             System.out.println("\n=== ATRIBUTOS DECLARADOS ===");
 
@@ -82,10 +75,6 @@ public class InspecaoClasses {
                 }
             }
 
-            // =========================================================
-            // MÉTODOS PÚBLICOS
-            // =========================================================
-
             System.out.println("\n=== MÉTODOS PÚBLICOS ===");
 
             Method[] metodosPublicos = classe.getMethods();
@@ -108,11 +97,7 @@ public class InspecaoClasses {
                 }
             }
 
-            // =========================================================
-            // MÉTODOS DECLARADOS NA PRÓPRIA CLASSE
-            // =========================================================
-
-            System.out.println("\n=== MÉTODOS DECLARADOS NA PRÓPRIA CLASSE ===");
+           System.out.println("\n=== MÉTODOS DECLARADOS NA PRÓPRIA CLASSE ===");
 
             Method[] metodosDeclarados = classe.getDeclaredMethods();
 
@@ -133,10 +118,6 @@ public class InspecaoClasses {
                     );
                 }
             }
-
-            // =========================================================
-            // DIFERENÇA ENTRE MÉTODOS PÚBLICOS E DECLARADOS
-            // =========================================================
 
             System.out.println("\n=== DIFERENÇA ENTRE OS MÉTODOS ===");
 
@@ -167,10 +148,7 @@ public class InspecaoClasses {
         }
     }
 
-    /**
-     * Formata os tipos dos parâmetros de um construtor ou método.
-     */
-    private static String formatarParametros(Class<?>[] parametros) {
+   private static String formatarParametros(Class<?>[] parametros) {
 
         StringBuilder resultado = new StringBuilder();
 
@@ -187,9 +165,6 @@ public class InspecaoClasses {
     }
 }
 
-/**
- * Classe de exemplo utilizada para demonstrar a inspeção por Reflection.
- */
 class PessoaReflexao {
 
     private String nome;
