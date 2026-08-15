@@ -27,7 +27,7 @@ public class GeradorSql {
 
             Coluna coluna = campo.getAnnotation(Coluna.class);
 
-            // Ignora campos que não possuem @Coluna
+    
             if (coluna == null) {
                 continue;
             }
